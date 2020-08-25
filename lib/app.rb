@@ -102,7 +102,7 @@ class App
   def flatten_strategy_extension
     "extension FlattenStrategy {
     static let maxConcurrent: FlattenStrategy = {
-        let n = UInt(ProcessInfo().processorCount * 2)
+        let n = UInt(ProcessInfo().processorCount)
         return FlattenStrategy.concurrent(limit: n)
     }()
 }
